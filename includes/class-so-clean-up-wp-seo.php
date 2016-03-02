@@ -211,7 +211,7 @@ class CUWS {
 		// robots nag
 		$hide_robots_nag = get_option( 'cuws_hide_robots_nag' );
 		if ( !empty( $hide_robots_nag ) ) {
-			echo '#robotsmessage,#wpseo_advanced .error-message{display:none;}'; // @since v2.0.0 hide robots nag
+			echo '#wpseo_advanced .error-message{display:none;}'; // @since v2.0.0 hide robots nag
 		}
 
 		// gsc nag
