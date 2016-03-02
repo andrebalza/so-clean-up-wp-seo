@@ -202,12 +202,6 @@ class CUWS {
 			echo '#wpseo-dismiss-about{display:none;}'; // @since v1.4.0 hide updated nag (introduced with Yoast SEO version 2.2.1)
 		}
 
-		// recalculate nag
-		$hide_recalc_nag = get_option( 'cuws_hide_recalc_nag' );
-		if ( !empty( $hide_recalc_nag ) ) {
-			echo '#wpseo-dismiss-recalculate{display:none;}'; // @since v1.7.5 hide SEO score algorithm recalculate nag
-		}
-
 		// robots nag
 		$hide_robots_nag = get_option( 'cuws_hide_robots_nag' );
 		if ( !empty( $hide_robots_nag ) ) {
@@ -355,7 +349,6 @@ class CUWS {
 	private function _set_defaults() {
 		update_option( 'cuws_hide_ads', 'on', true );
 		update_option( 'cuws_hide_about_nag', 'on', true );
-		update_option( 'cuws_hide_recalc_nag', 'on', true );
 		update_option( 'cuws_hide_robots_nag', 'on', true );
 		update_option( 'cuws_hide_imgwarning_nag', 'on', true );
 		update_option( 'cuws_hide_addkw_button', 'on', true );
