@@ -183,6 +183,7 @@ class CUWS {
 	 * CSS needed to hide the various options ticked with checkboxes
 	 *
 	 * @since v2.0.0
+	 * @modified v2.1.0 remove options for nags that have been temporarily disabled in v3.1 of Yoast SEO plugin
 	 */
 	// CSS needed to hide the various options ticked with checkboxes
 	public function so_cuws_hide_visibility_css() {
@@ -205,12 +206,6 @@ class CUWS {
 		$hide_recalc_nag = get_option( 'cuws_hide_recalc_nag' );
 		if ( !empty( $hide_recalc_nag ) ) {
 			echo '#wpseo-dismiss-recalculate{display:none;}'; // @since v1.7.5 hide SEO score algorithm recalculate nag
-		}
-
-		// tagline nag
-		$hide_tagline_nag = get_option( 'cuws_hide_tagline_nag' );
-		if ( !empty( $hide_tagline_nag ) ) {
-			echo '#wpseo-dismiss-tagline-notice{display:none;}'; // @since v2.0.0 hide default tagline nag
 		}
 
 		// robots nag
@@ -251,8 +246,8 @@ class CUWS {
 
 		// admin columns
 		// @since v2.0.0 remove seo columns one by one
-		// @since 2.0.2 add empty array as default to avoid warnings form subsequent in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
-		// @since 2.1 simplyfy the CSS rules and add the rule to hide the seo-score column on taxonomies (added to v3.1.0 of Yoast SEO plugin)
+		// @modified 2.0.2 add empty array as default to avoid warnings form subsequent in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
+		// @modified 2.1 simplyfy the CSS rules and add the rule to hide the seo-score column on taxonomies (added to v3.1 of Yoast SEO plugin)
 		$admincolumns = get_option( 'cuws_hide_admin_columns', array() );
 
 		// all columns
@@ -367,7 +362,6 @@ class CUWS {
 		update_option( 'cuws_hide_ads', 'on', true );
 		update_option( 'cuws_hide_about_nag', 'on', true );
 		update_option( 'cuws_hide_recalc_nag', 'on', true );
-		update_option( 'cuws_hide_tagline_nag', 'on', true );
 		update_option( 'cuws_hide_robots_nag', 'on', true );
 		update_option( 'cuws_hide_gsc_nag', 'on', true );
 		update_option( 'cuws_hide_imgwarning_nag', 'on', true );

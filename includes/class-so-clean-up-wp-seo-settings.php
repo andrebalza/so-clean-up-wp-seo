@@ -125,13 +125,6 @@ class CUWS_Settings {
 					'default'		=> 'on'
 				),
 				array(
-					'id' 			=> 'hide_tagline_nag',
-					'label'			=> __( 'Tagline nag', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide tagline nag that shows when your site uses the default WordPress tagline.', 'so-clean-up-wp-seo' ),
-					'type'			=> 'checkbox',
-					'default'		=> 'on'
-				),
-				array(
 					'id' 			=> 'hide_robots_nag',
 					'label'			=> __( 'Robots nag', 'so-clean-up-wp-seo' ),
 					'description'	=> __( 'Hide robots nag that shows when your site is blocking access to robots, for example on dev and staging sites.', 'so-clean-up-wp-seo' ) . '<br />' . __( ' It also hides the warning in the advanced tab of Yoast SEO UI in edit Post/Page screen.', 'so-clean-up-wp-seo' ),
