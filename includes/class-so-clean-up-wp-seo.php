@@ -74,7 +74,7 @@ class CUWS {
 	 * @since   v2.0.0
 	 * @return  void
 	 */
-	public function __construct ( $file = '', $version = '2.0.2' ) {
+	public function __construct ( $file = '', $version = '2.1.0' ) {
 		$this->_version = $version;
 		$this->_token = 'cuws';
 
