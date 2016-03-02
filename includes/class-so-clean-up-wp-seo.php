@@ -240,7 +240,7 @@ class CUWS {
 
 		// all columns
 		if ( in_array( 'all', $admincolumns ) ) {
-		    echo '.column-wpseo-score,.column-wpseo_score,.column-wpseo-title.column-wpseo-metadesc.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
+		    echo '.column-wpseo-score,.column-wpseo_score,.column-wpseo-title,.column-wpseo-metadesc,.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// seo score column
