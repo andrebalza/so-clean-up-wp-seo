@@ -252,31 +252,32 @@ class CUWS {
 		// admin columns
 		// @since v2.0.0 remove seo columns one by one
 		// @since 2.0.2 add empty array as default to avoid warnings form subsequent in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
+		// @since 2.1 simplyfy the CSS rules and add the rule to hide the seo-score column on taxonomies (added to v3.1.0 of Yoast SEO plugin)
 		$admincolumns = get_option( 'cuws_hide_admin_columns', array() );
 
 		// all columns
 		if ( in_array( 'all', $admincolumns ) ) {
-		    echo '.wp-list-table thead #wpseo-score,.wp-list-table tbody .wpseo-score,.wp-list-table tfoot .column-wpseo-score,.wp-list-table #wpseo-title,.wp-list-table tbody .wpseo-title,.wp-list-table tfoot .column-wpseo-title,.wp-list-table #wpseo-metadesc,.wp-list-table tbody .wpseo-metadesc,.wp-list-table tfoot .column-wpseo-metadesc,.wp-list-table #wpseo-focuskw,.wp-list-table tbody .wpseo-focuskw,.wp-list-table tfoot .column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
+		    echo '.column-wpseo-score,.column-wpseo_score,.column-wpseo-title.column-wpseo-metadesc.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// seo score column
 		if ( in_array( 'seoscore', $admincolumns ) ) {
-		    echo '.wp-list-table thead #wpseo-score,.wp-list-table tbody .wpseo-score,.wp-list-table tfoot .column-wpseo-score   {display:none;}'; // @since v2.0.0 remove seo columns one by one
+		    echo '.column-wpseo-score,.column-wpseo_score{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// title column
 		if ( in_array( 'title', $admincolumns ) ) {
-			echo '.wp-list-table #wpseo-title,.wp-list-table tbody .wpseo-title,.wp-list-table tfoot .column-wpseo-title{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			echo '.column-wpseo-title{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// meta description column
 		if ( in_array( 'metadescr', $admincolumns ) ) {
-			echo '.wp-list-table #wpseo-metadesc,.wp-list-table tbody .wpseo-metadesc,.wp-list-table tfoot .column-wpseo-metadesc{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			echo '.column-wpseo-metadesc{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// focus keyword column
 		if ( in_array( 'focuskw', $admincolumns ) ) {
-			echo '.wp-list-table #wpseo-focuskw,.wp-list-table tbody .wpseo-focuskw,.wp-list-table tfoot .column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			echo '.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		echo '</style>';
