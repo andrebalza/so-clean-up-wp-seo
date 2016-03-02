@@ -132,13 +132,6 @@ class CUWS_Settings {
 					'default'		=> 'on'
 				),
 				array(
-					'id' 			=> 'hide_gsc_nag',
-					'label'			=> __( 'GSC nag', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide Google Search Console nag that warns about not missing any crawl errors by connecting the Yoast SEO plugin to it.', 'so-clean-up-wp-seo' ),
-					'type'			=> 'checkbox',
-					'default'		=> 'on'
-				),
-				array(
 					'id' 			=> 'hide_imgwarning_nag',
 					'label'			=> __( 'Featured image nag', 'so-clean-up-wp-seo' ),
 					'description'	=> __( 'Hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels.', 'so-clean-up-wp-seo' ),

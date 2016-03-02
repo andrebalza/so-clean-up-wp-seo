@@ -214,12 +214,6 @@ class CUWS {
 			echo '#wpseo_advanced .error-message{display:none;}'; // @since v2.0.0 hide robots nag
 		}
 
-		// gsc nag
-		$hide_gsc_nag = get_option( 'cuws_hide_gsc_nag' );
-		if ( !empty( $hide_gsc_nag ) ) {
-			echo '#wpseo-dismiss-gsc{display:none;}'; // @since v2.0.0 hide gsc nag
-		}
-
 		// image warning nag
 		$hide_imgwarning_nag = get_option( 'cuws_hide_imgwarning_nag' );
 		if ( !empty( $hide_imgwarning_nag ) ) {
@@ -363,7 +357,6 @@ class CUWS {
 		update_option( 'cuws_hide_about_nag', 'on', true );
 		update_option( 'cuws_hide_recalc_nag', 'on', true );
 		update_option( 'cuws_hide_robots_nag', 'on', true );
-		update_option( 'cuws_hide_gsc_nag', 'on', true );
 		update_option( 'cuws_hide_imgwarning_nag', 'on', true );
 		update_option( 'cuws_hide_addkw_button', 'on', true );
 		update_option( 'cuws_hide_trafficlight', 'on', true );
